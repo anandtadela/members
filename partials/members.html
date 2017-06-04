@@ -1,0 +1,40 @@
+<div>
+    <div class="main">
+         <div class="form-group">
+            <label for="clientName">Filter by member name</label>
+            <input type="text" class="form-control" ng-model="search.firstName" placeholder="enter member name"  aria-describedby="enter member name"  />
+        </div>
+        <div class="row">
+            <div class="table-responsive col-md-8">
+                <table border="0" cellpadding="5px" cellspacing="0" class="table table-hover table-bordered table-striped">
+                    <tr>
+                        <th>Name</th>
+                        <th>Occupation</th>
+                        <th>Company</th>
+                    </tr>
+                    <tr ng-repeat="member in members | filter:search" ng-click="getMemberDetails(member)" role="button">
+                        <td ng-bind="member.firstName + ' ' +  member.surname"></td>
+                        <td><span ng-bind="member.company"></span></td>
+                        <td ng-bind="member.occupation"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Member Details</div>
+                    <div class="panel-body">
+                        <h4 ng-bind="fullName"></h4>
+                        <img ng-src="{{imgSrc}}" />
+                        <div><p ng-bind="gender" class="form-control-static"></p></div>
+                        <div><p ng-bind="birthday" class="form-control-static"></p></div>
+                        <div><p ng-bind="state" class="form-control-static"></p></div>
+                        <div><p ng-bind="motto" class="form-control-static"></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!--<a href="/default" role="button" class="btn btn-primary">Back to home</a>-->
+    </div>
+</div>
