@@ -1,15 +1,18 @@
 {
-  "name": "form-project",
+  "name": "members-project",
   "version": "1.0.0",
   "description": "demo project.",
   "scripts": {
     "lite": "lite-server –port 10001",
-    "start": "npm run lite",
-    "sass": "node-sass -rw sass/ -o css/"
+    "start": "npm run lite"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "jasmine-core": "^2.6.2",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.0",
     "lite-server": "^1.3.4"
   },
   "dependencies": {}
